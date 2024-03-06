@@ -1,0 +1,460 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+html body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position : relative;
+}
+
+.section-padding{
+  padding-inline: 25px;
+}
+
+nav{
+  overflow : hidden;
+}
+
+.index-nav{
+  height : 95vh;
+}
+
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation-sec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+a{
+  color: black;
+}
+
+.navigation-sec .nav-section ul{
+  display: flex;
+  gap: 25px;
+}
+
+.navigation-sec .nav-section ul li a{
+  color: black;
+  font-weight: 600;
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+nav .nav-button{
+  display: flex;
+  gap: 25px;
+}
+
+nav .nav-button .sign-up{
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+nav .nav-button .log-in{
+ background-color: white;
+}
+
+main{
+  min-height : cal(100vh - (80px + 75vh))
+}
+
+#page-1{
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.hero-section{
+  height: 75vh;
+  width: 100%;
+  background-color: black;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  overflow: auto;
+}
+
+
+.hero-section .hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.hero{
+  width: 100%;
+  position: relative;
+}
+
+.hero-section .hero .hero-info{
+  position: absolute;
+  bottom: 0;
+  padding: 60px;
+  color: white;
+}
+
+.hero-section .hero-info h1{
+  font-size: 45px;
+  color: #f7f7f7;
+}
+
+.hero-section .hero-info p{
+  font-size: 24px;
+}
+
+.arrow-slide{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  font-size: 100px;
+  font-weight: 100;
+  margin-right: 10px;
+}
+
+
+
+
+.recent-blog-sec{
+  min-height: 60vh;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.blog-section{
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.post-recent{
+  min-height: 500px;
+  width: 30%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.post-img{
+  height: 45%;
+  background: gray;
+  overflow: hidden;
+  border-radius: 18px;
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  cursor : pointer;
+}
+
+
+.post-img:hover img{
+  scale : 1;
+}
+
+.parag{
+  width: 100%;
+}
+
+@keyframes loading{
+  0%{
+    background-color: gray;
+  }
+  100%{
+    background-color: white;
+  }
+}
+
+.post-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition : all 0.3s ease;
+  scale : 1.06;
+}
+
+.post-heading h2,p{
+  margin-top: 18px;
+}
+
+.post-heading a{
+  transition : 0.4s;
+}
+
+.post-heading a:hover{
+  color: blue;
+}
+
+
+
+.loading-btn-sec{
+  width: 100%;
+  text-align: center;
+}
+
+.loading-btn-sec button{
+  padding: 15px 25px;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#footer{
+  width: 100%;
+  color: #f7f7f7;
+  height : 70vh;
+  overflow : hidden;
+  margin-block : 22px;
+}
+
+.footer-main-section{
+  width: 100%;
+  height : 100%;
+  background-color: black;
+  border-radius: 16px;
+  padding-inline: 30px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+
+.footer-top-sec{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-top-sec h4{
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.footer-btn{
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.footer-middel-sec{
+  width: 100%;
+  padding-top: 35px;
+}
+
+.column-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.bottom-sec{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.column-section ul li{
+  line-height: 28px;
+}
+
+.footer-btn{
+  display: flex;
+  gap: 10px;
+}
+
+.footer-btn button{
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.footer-btn button:nth-child(1){
+  background-color: black;
+  border: 1px solid gray;
+  color: #f7f7f7;
+}
+
+.footer-btn button:nth-child(2){
+  background-color : darkslategray;
+  color: #f7f7f7;
+  border:1px solid darkgray;
+}
+
+/* ARTICLE SECTION CSS */
+
+.heading-img-sec{
+  width: 100%;
+  height: 75vh;
+  background: red;
+  border-radius: 18px 18px 0 0;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.heading-img-sec img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.article-heading{
+  min-height: 5vh;
+  width: 100%;
+  margin-top: 20px;
+  background-color: black;
+  text-align: center;
+}
+
+.js-code-highlight {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    margin-top: 18px;
+    padding: 30px 18px;
+    overflow : hidden;
+}
+
+.code-fullScreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    background-color: black;
+    color: white;
+    padding: 25px 25px;
+    overflow-y : hidden;
+    font-size: 16px;
+    scale: 0;
+    opacity : 0;
+    transition : opacity 0.3 ease
+}
+.fullScreen-btn{
+  position : absolute;
+  background-color: gray;
+  fill: white;
+  padding: 8px 12px;
+  border-bottom-left-radius: 10px;
+  z-index : 99999;
+  top : 0;
+  right : 0;
+}
+
+.fullScreen-btn:hover{
+  background-color : #969696;
+}
+
+.display{
+  display : none;
+}
+.code-fullScreen p{
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+pre{
+  line-height : 20px;
+}
+.o{
+  color : #f9690e;
+}
+.c1{
+  color : #808080;
+}
+.kn{
+  color : #f9690e;
+}
+.s{
+  color : #f2ca27;
+}
+.nd{
+  color : #7ed07e;
+}
+.kd{
+  color : #f39c12;
+}
+.nt{
+  color : #f9690e;
+}
+.na{
+  color : #7ed07e;
+}
+.s2{
+  color : #f2ca27;
+}
+.w{
+  color : #f8f8f2;
+}
+.nf{
+  color : #7ed07e;
+}
+.k{
+  color : #f39c12;
+}
+
+.overflow{
+  overflow : hidden;
+}
+
+.highlight__panel-action {
+    background-color: gray;
+    fill : white;
+    padding : 8px 12px;
+    opacity : 0;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition : opacity 0.3s ease;
+}
+
+.highlight__panel-action:hover{
+  background-color : #969696;
+}
+
+.js-code-highlight:hover .highlight__panel-action{
+  opacity : 1;
+}
+
+.highlight-action--fullscreen-off{
+  display: none;
+}
+.highlight-action--fullscreen-on{
+  display: block;
+}
+
