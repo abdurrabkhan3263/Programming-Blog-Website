@@ -12,6 +12,7 @@ function article(){
   .then(data => {
     let value = data.body_html;
     let path = document.querySelector('.article-section');
+    console.log(data);
     headingImage.setAttribute("src" , data.cover_image)
     mainHeading.innerHTML = data.title;
     path.innerHTML = value;
