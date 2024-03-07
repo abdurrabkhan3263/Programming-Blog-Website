@@ -573,3 +573,17 @@ pre {
   padding: 8px 25px;
   border-radius: 8px;
 }
+
+/* BLOG STYLE START */
+.diff-lang {
+  display: flex;
+  justify-content: space-between;
+}
+
+.diff-lang button {
+  background-color: aqua;
+  padding: 12px 22px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+}

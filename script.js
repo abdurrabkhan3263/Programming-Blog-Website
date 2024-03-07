@@ -1,14 +1,7 @@
 // HANDELING API OF DEV
+import apiHandling from "./api.js";
 let pageNum = 1;
 let postSection = document.querySelector(".blog-section");
-
-export async function apiHandling(num) {
-  let api = await fetch(
-    `https://dev.to/api/articles?username=nataliedeweerd&tag=programming&page=${num}`
-  );
-  let response = await api.json();
-  return response;
-}
 
 function postCard(img, title, para, id) {
   let div = document.createElement("div");
@@ -24,7 +17,7 @@ function postCard(img, title, para, id) {
 }
 
 async function addHtml() {
-  let apiData = await apiHandling(pageNum);
+  let apiData = await apiHandling(pageNum, "programming");
 
   apiData.forEach((value) => {
     let post = postCard(
