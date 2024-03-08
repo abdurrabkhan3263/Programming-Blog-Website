@@ -56,11 +56,16 @@ const addData = async (value) => {
 
 getData(pageNum, title);
 
-let button = document.getElementsByClassName("tag");
+let button = document.getElementsByClassName("diff-btn");
 
 Array.from(button).forEach((value, index) => {
   value.addEventListener("click", (e) => {
-    e.target.classList.add("clickBtn");
+    Array.from(button).forEach((btn) => {
+      if (btn.classList.contains("clickBtn")) {
+        btn.classList.replace("clickBtn", "tag");
+        e.target.classList.replace("tag", "clickBtn");
+      }
+    });
     if (!postSection == "") {
       postSection.innerHTML = "";
     }

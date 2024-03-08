@@ -47,8 +47,37 @@ nav {
   overflow: hidden;
 }
 
-nav a {
+nav .nav-items {
   font-family: para;
+}
+
+nav ul li {
+  font-family: para;
+}
+
+#nav-items-hightlight {
+  position: relative;
+}
+
+#nav-items-hightlight::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 110%;
+  height: 2px;
+  background-color: black;
+  animation-name: lineAni;
+  animation: lineAni 0.5s ease-in;
+}
+
+@keyframes lineAni {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110%;
+  }
 }
 
 .index-nav {
@@ -231,10 +260,6 @@ main {
   background: gray;
   overflow: hidden;
   border-radius: 12px;
-  animation-name: loading;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  cursor: pointer;
 }
 
 .post-img:hover img {
@@ -411,6 +436,7 @@ p {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 12px;
 }
 
 .heading-img-sec {
@@ -569,14 +595,19 @@ pre {
 .diff-lang {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
-.tag {
+.diff-lang .tag {
   background-color: aqua;
-  padding: 12px 22px;
   border-radius: 8px;
   user-select: none;
   cursor: pointer;
+}
+
+.diff-lang .diff-btn {
+  padding: 10px 20px;
+  transition: scale 0.2s linear;
 }
 
 .clickBtn {
@@ -586,4 +617,6 @@ pre {
   user-select: none;
   cursor: pointer;
   color: white;
+  box-shadow: 0px 0px 25px 0px rgba(255, 99, 2, 0.26);
+  scale: 1.12;
 }
