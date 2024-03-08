@@ -1,10 +1,30 @@
 import apiHandling from "./api.js";
 
-let postSection = document.querySelector(".blog-section");
+// MAKING OUR OWEN METHOD
+String.prototype.removeSpace = function () {
+  let value = "";
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] == " ") {
+      continue;
+    }
+    value = value + this[i];
+  }
+  return value;
+};
 
-async function getData() {
-  let data = await apiHandling(1, "machinelearning");
-  addData(data);
+let pageNum = 1;
+let title = "javascript";
+let postSection = document.querySelector(".blog-section");
+let data;
+let loadingBtn = document.querySelector("#loading-btn");
+
+async function getData(page, title) {
+  data = await apiHandling(page, title);
+  if (data !== undefined) {
+    addData(data);
+  } else {
+    loadingBtn.style.display = "none";
+  }
 }
 
 function postCard(img, title, para, id) {
@@ -34,4 +54,24 @@ const addData = async (value) => {
   });
 };
 
-getData();
+getData(pageNum, title);
+
+let button = document.getElementsByClassName("tag");
+
+Array.from(button).forEach((value, index) => {
+  value.addEventListener("click", (e) => {
+    e.target.classList.add("clickBtn");
+    if (!postSection == "") {
+      postSection.innerHTML = "";
+    }
+    let tagVal = e.target.textContent.toLowerCase();
+    title = tagVal.removeSpace();
+    getData(pageNum, title);
+  });
+});
+
+// LOADING MORE BTN CODE
+loadingBtn.addEventListener("click", () => {
+  pageNum += 1;
+  getData(pageNum, title);
+});

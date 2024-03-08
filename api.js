@@ -3,7 +3,9 @@ async function apiHandling(num, tag) {
     `https://dev.to/api/articles?username=nataliedeweerd&tag=${tag}&page=${num}`
   );
   let response = await api.json();
-  return response;
+  if (response.length !== 0) {
+    return response;
+  }
 }
 
 export default apiHandling;

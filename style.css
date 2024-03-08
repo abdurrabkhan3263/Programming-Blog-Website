@@ -16,7 +16,7 @@ html body {
   position: relative;
 }
 
-.index-body {
+body {
   background-color: #f5fefd;
 }
 
@@ -171,7 +171,7 @@ main {
 
 .blog-section {
   margin-top: 20px;
-  height: 100%;
+  height: max-content;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -243,15 +243,6 @@ main {
 
 .parag {
   width: 100%;
-}
-
-@keyframes loading {
-  0% {
-    background-color: gray;
-  }
-  100% {
-    background-color: white;
-  }
 }
 
 .post-img img {
@@ -580,10 +571,19 @@ pre {
   justify-content: space-between;
 }
 
-.diff-lang button {
+.tag {
   background-color: aqua;
   padding: 12px 22px;
   border-radius: 8px;
   user-select: none;
   cursor: pointer;
+}
+
+.clickBtn {
+  background-color: #f9690e;
+  padding: 12px 22px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  color: white;
 }

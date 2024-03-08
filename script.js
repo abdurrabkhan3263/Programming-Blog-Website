@@ -2,6 +2,7 @@
 import apiHandling from "./api.js";
 let pageNum = 1;
 let postSection = document.querySelector(".blog-section");
+let loadBtn = document.querySelector("#loading-btn");
 
 function postCard(img, title, para, id) {
   let div = document.createElement("div");
@@ -18,23 +19,24 @@ function postCard(img, title, para, id) {
 
 async function addHtml() {
   let apiData = await apiHandling(pageNum, "programming");
+  if (apiData !== undefined) {
+    apiData.forEach((value) => {
+      let post = postCard(
+        value.cover_image,
+        value.title,
+        value.description,
+        value.id
+      );
 
-  apiData.forEach((value) => {
-    let post = postCard(
-      value.cover_image,
-      value.title,
-      value.description,
-      value.id
-    );
-
-    postSection.appendChild(post);
-  });
+      postSection.appendChild(post);
+    });
+  } else {
+    loadBtn.style.display = "none";
+  }
 }
 addHtml();
 
 // ADDING LOAD MORE CODE
-let loadBtn = document.querySelector("#loading-btn");
-
 loadBtn.addEventListener("click", () => {
   pageNum = pageNum + 1;
   addHtml();
