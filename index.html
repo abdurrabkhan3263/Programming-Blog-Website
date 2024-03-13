@@ -10,6 +10,9 @@
   </head>
 
   <body class="index-body">
+    <div class="dataNot-found">
+      <h2>No Data</h2>
+    </div>
     <nav class="section-padding index-nav">
       <div class="navigation-sec">
         <div class="logo">
@@ -24,7 +27,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="nav-items">About </a>
+              <a href="about.html" class="nav-items">About </a>
             </li>
             <li>
               <a
@@ -41,17 +44,23 @@
         </div>
 
         <div class="nav-button">
-          <button class="log-in">Log in</button>
-          <button class="sign-up">Sign up</button>
+          <button class="read-later">Read Later</button>
         </div>
       </div>
       <div class="hero-section">
-        <div class="hero" id="hero1">
+        <div class="read-more">
+          <div class="more-section">
+            <div class="inside-see-more">
+              <span>See-More</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="hero">
           <img
-            src="Image/arlington-research-nFLmPAf9dVc-unsplash.jpg"
-            alt="hero-img"
+            src="https://images.unsplash.com/photo-1709668158987-fa2714cd89e6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
           />
-
           <div class="hero-info">
             <p>Featured22222222222222222222222</p>
             <h1>
@@ -64,11 +73,35 @@
               frankie sulliavan to talk about gatekeeping in product desing and
               how anyone can get into this growing industry
             </p>
-            <div class="arrow-slide">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
           </div>
         </div>
+        <div class="hero">
+          <img
+            src="https://images.unsplash.com/photo-1709668158987-fa2714cd89e6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <div class="hero-info">
+            <p>Featured22222222222222222222222</p>
+            <h1>
+              Breaking Into Product Design: Advice from Untitled Founder,
+              Frankies
+            </h1>
+            <p>
+              Lets get one thing out of the way: your dont need a fancy
+              bechelors degree to get into product design. we sat down with
+              frankie sulliavan to talk about gatekeeping in product desing and
+              how anyone can get into this growing industry
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <i class="fa-solid fa-chevron-left" id="left-arrow"></i>
+        <div class="point">
+          <i class="fa-regular fa-circle"></i>
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <i class="fa-solid fa-chevron-right" id="right-arrow"></i>
       </div>
     </nav>
     <main>
@@ -167,5 +200,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js" type="module"></script>
+    <script src="readMore.js" type="module"></script>
   </body>
 </html>
